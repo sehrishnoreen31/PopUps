@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopUp</title>
+    <style>
+        .show{
+            background-color: rgb(6, 6, 97);
+            padding: 10px 15px;
+            color:rgb(255, 255, 255);
+            font-size: 20px;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close{
+            background-color: rgb(255, 255, 255);
+            border: none;
+            padding: 5px 10px;
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            font-weight: 600;
+            color: rgb(104, 104, 109);
+            cursor: pointer;
+        }
+
+        .ok{
+            background-color: rgb(0, 104, 14);
+            border: none;
+            padding: 4px 8px;
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .popup{
+            /* display: flex; */
+            flex-direction: column;
+            background-color: rgb(255, 255, 255);
+            max-width: 200px;
+            max-height: 200px;
+            padding: 20px;
+            margin: auto auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            box-shadow: 4px 4px 4px 4px rgba(209, 207, 207, 0.637);
+            border-color: rgba(209, 207, 207, 0.637);
+            display: none;
+        }
+        .btns{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <button class="show" id="show">Show Popup</button>
+        <section>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In eum explicabo ipsam veniam modi perspiciatis deleniti, architecto quisquam officia sit iure, provident placeat unde iusto earum! Saepe laudantium, excepturi sint odit dolores, ducimus error ea vero quasi animi commodi expedita iure? Qui, laborum voluptatibus? Atque similique iusto quaerat illum consequuntur.
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In eum explicabo ipsam veniam modi perspiciatis deleniti, architecto quisquam officia sit iure, provident placeat unde iusto earum! Saepe laudantium, excepturi sint odit dolores, ducimus error ea vero quasi animi commodi expedita iure? Qui, laborum voluptatibus? Atque similique iusto quaerat illum consequuntur.
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In eum explicabo ipsam veniam modi perspiciatis deleniti, architecto quisquam officia sit iure, provident placeat unde iusto earum! Saepe laudantium, excepturi sint odit dolores, ducimus error ea vero quasi animi commodi expedita iure? Qui, laborum voluptatibus? Atque similique iusto quaerat illum consequuntur.
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In eum explicabo ipsam veniam modi perspiciatis deleniti, architecto quisquam officia sit iure, provident placeat unde iusto earum! Saepe laudantium, excepturi sint odit dolores, ducimus error ea vero quasi animi commodi expedita iure? Qui, laborum voluptatibus? Atque similique iusto quaerat illum consequuntur.
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In eum explicabo ipsam veniam modi perspiciatis deleniti, architecto quisquam officia sit iure, provident placeat unde iusto earum! Saepe laudantium, excepturi sint odit dolores, ducimus error ea vero quasi animi commodi expedita iure? Qui, laborum voluptatibus? Atque similique iusto quaerat illum consequuntur.
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In eum explicabo ipsam veniam modi perspiciatis deleniti, architecto quisquam officia sit iure, provident placeat unde iusto earum! Saepe laudantium, excepturi sint odit dolores, ducimus error ea vero quasi animi commodi expedita iure? Qui, laborum voluptatibus? Atque similique iusto quaerat illum consequuntur.
+        </section>
+        <div class="popup" id="popup">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, optio.</p>
+            <div class="btns">
+                <button class="close" id="close">Close</button>
+            <button class="ok" id="ok">Ok</button>
+            </div>
+        </div>
+
+        <script>
+            let showBtn = document.getElementById('show');
+            showBtn.onclick = function showPopUp(){
+                let popUp = document.getElementById('popup');
+                popUp.style.display = 'flex';
+            }
+
+            let closeBtn = document.getElementById('close');
+            closeBtn.onclick = function closePopUp(){
+                let popUp = document.getElementById('popup');
+                popUp.style.display = 'none';
+            }
+
+            let okBtn = document.getElementById('ok');
+            okBtn.onclick = function closePopUp(){
+                let popUp = document.getElementById('popup');
+                popUp.style.display = 'none';
+            }
+        </script>
+    </main>
+</body>
+</html>
